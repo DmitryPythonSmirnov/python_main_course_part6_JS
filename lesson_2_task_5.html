@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 2 task 5</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        /*
+        Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+        В зависимости от переданного значения операции (использовать switch) выполнить одну
+        из арифметических операций (использовать функции из задания 4) и вернуть полученное значение.
+        */
+
+        /**
+         * Функция складывает два числа
+         * @param {number} num1 - первое число
+         * @param {number} num2 - второе число
+         * @returns {number} Сумма двух чисел
+         */
+        function addition(num1, num2) {
+            return num1 + num2;
+        }
+
+        /**
+         * Функция вычитает из первого числа второе
+         */
+        function subtraction(num1, num2) {
+            return num1 - num2;
+        }
+
+        /**
+         * Функция умножает два числа
+         */
+        function multiplication(num1, num2) {
+            return num1 * num2;
+        }
+
+        /**
+         * Функция делит первое число на второе
+         */
+        function division(num1, num2) {
+            return num1 / num2;
+        }
+
+        /**
+         * Функция принимает два числа и выполняет мат.операцию
+         * (какую - зависит от значения третьего аргумента).
+         */
+        function mathOperation(arg1, arg2, operation) {
+            let result = "";
+            switch (operation) {
+                case "addition":
+                    result = addition(arg1, arg2);
+                    break;
+                case "subtraction":
+                    result = subtraction(arg1, arg2);
+                    break;
+                case "multiplication":
+                    result = multiplication(arg1, arg2);
+                    break;
+                case "division":
+                    result = division(arg1, arg2);
+                    break;
+                default:
+                    result = "Неправильное название мат.операции"
+            }
+            return result
+        }
+
+
+        // Проверка
+        let x = 5;
+        let y = 6;
+        let op = "division";
+        alert(`${x} ${op} ${y} = ${mathOperation(x, y, op)}`);
+    </script>
+</body>
+
+</html>
