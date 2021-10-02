@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 2 task 4</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        /*
+        Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами.
+        Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+        Обязательно использовать оператор return.
+        */
+
+        /**
+         * Функция складывает два числа
+         * @param {number} num1 - первое число
+         * @param {number} num2 - второе число
+         * @returns {number} Сумма двух чисел
+         */
+        function addition(num1, num2) {
+            return num1 + num2;
+        }
+
+        /**
+         * Функция вычитает из первого числа второе
+         */
+        function subtraction(num1, num2) {
+            return num1 - num2;
+        }
+
+        /**
+         * Функция умножает два числа
+         */
+        function multiplication(num1, num2) {
+            return num1 * num2;
+        }
+
+        /**
+         * Функция делит первое число на второе
+         */
+        function division(num1, num2) {
+            return num1 / num2;
+        }
+
+        // Проверка
+        let x = 5;
+        let y = 6;
+        alert(`x + y = ${addition(x, y)}`);
+        alert(`x - y = ${subtraction(x, y)}`);
+        alert(`x * y = ${multiplication(x, y)}`);
+        alert(`x / y = ${division(x, y)}`);
+    </script>
+</body>
+
+</html>
