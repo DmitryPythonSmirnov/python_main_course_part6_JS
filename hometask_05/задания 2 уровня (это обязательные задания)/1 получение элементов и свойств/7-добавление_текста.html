@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#">ссылка</a>
+    <a href="#"></a>
+    <a href="#">ссылка</a>
+    <a href="#"></a>
+
+    <!-- Задание.
+    1. Получите все ссылки.
+    2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
+
+    <script>
+        "use strict";
+
+        let allLinks = document.links;
+
+        // Текс в ссылках до изменений
+        for (let i = 0; i < allLinks.length; i++) {
+            console.log(allLinks[i].textContent);
+        }
+
+        // Добавление текста "ссылка" там, где его нет
+        for (let i = 0; i < allLinks.length; i++) {
+            if (allLinks[i].textContent != "ссылка") {
+                allLinks[i].textContent = "ссылка";
+            }
+        }
+
+        console.log('Добавили текст "ссылка" там, где его нет')
+
+        // Текс в ссылках после изменений
+        for (let i = 0; i < allLinks.length; i++) {
+            console.log(allLinks[i].textContent);
+        }
+
+    </script>
+</body>
+
+</html>
